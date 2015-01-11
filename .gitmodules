@@ -22,3 +22,6 @@
 [submodule "hardware"]
 	path = hardware
 	url = https://github.com/OpenFPGAduino/hardware.git
+[submodule "linux"]
+	path = linux
+	url = https://github.com/OpenFPGAduino/linux.git
