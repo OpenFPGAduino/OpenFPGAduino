@@ -19,3 +19,6 @@
 [submodule "boot"]
 	path = boot
 	url = https://github.com/OpenFPGAduino/boot.git
+[submodule "hardware"]
+	path = hardware
+	url = https://github.com/OpenFPGAduino/hardware.git
