@@ -1,0 +1,21 @@
+[submodule "Arduinojs"]
+	path = Arduinojs
+	url = https://github.com/OpenFPGAduino/Arduinojs.git
+[submodule "fpga"]
+	path = fpga
+	url = https://github.com/OpenFPGAduino/fpga.git
+[submodule "libAduino"]
+	path = libAduino
+	url = https://github.com/OpenFPGAduino/libAduino.git
+[submodule "driver"]
+	path = driver
+	url = https://github.com/OpenFPGAduino/driver.git
+[submodule "ArduinoIDE"]
+	path = ArduinoIDE
+	url = https://github.com/OpenFPGAduino/ArduinoIDE.git
+[submodule "docs"]
+	path = docs
+	url = https://github.com/OpenFPGAduino/docs.git
+[submodule "boot"]
+	path = boot
+	url = https://github.com/OpenFPGAduino/boot.git
