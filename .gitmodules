@@ -28,3 +28,6 @@
 [submodule "node"]
 	path = node
 	url = https://github.com/OpenFPGAduino/node.git
+[submodule "rootfs"]
+	path = rootfs
+	url = https://github.com/OpenFPGAduino/rootfs.git
