@@ -25,3 +25,6 @@
 [submodule "linux"]
 	path = linux
 	url = https://github.com/OpenFPGAduino/linux.git
+[submodule "node"]
+	path = node
+	url = https://github.com/OpenFPGAduino/node.git
