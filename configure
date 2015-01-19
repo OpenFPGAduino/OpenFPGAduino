@@ -1,1 +1,12 @@
-cd node; CC=arm-none-linux-gnueabi-gcc LD=arm-none-linux-gnueabi-ld ./configure --prefix=PREFIX --dest-cpu=arm --dest-os=linux --with-arm-float-abi=soft; cd ..
+HOST=arm-none-linux-gnueabi
+cd node; \
+AR="${HOST}-ar" \
+STRIP="${HOST}-strip" \
+OBJCOPY="${HOST}-objcopy" \ 
+LD="${HOST}-ld" \
+OBJDUMP="${HOST}-objdump" \
+CC="${HOST}-gcc" \
+CXX="${HOST}-g++" \
+NM="${HOST}-nm" \
+AS="${HOST}-as" \
+./configure --prefix=PREFIX --dest-cpu=arm --dest-os=linux --with-arm-float-abi=soft; cd ..
