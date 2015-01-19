@@ -1,1 +1,1 @@
-node/configure --dest-cpu=arm
+cd node; CC=arm-none-linux-gnueabi-gcc LD=arm-none-linux-gnueabi-ld ./configure --prefix=PREFIX --dest-cpu=arm --dest-os=linux --with-arm-float-abi=soft; cd ..
