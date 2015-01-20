@@ -1,12 +1,17 @@
+#/bin/sh
 HOST=arm-none-linux-gnueabi
-cd node; \
+cd node; 
+CPP="${HOST}-gcc -E" \
 AR="${HOST}-ar" \
 STRIP="${HOST}-strip" \
-OBJCOPY="${HOST}-objcopy" \ 
+OBJCOPY="${HOST}-objcopy" \
 LD="${HOST}-ld" \
 OBJDUMP="${HOST}-objdump" \
 CC="${HOST}-gcc" \
 CXX="${HOST}-g++" \
 NM="${HOST}-nm" \
 AS="${HOST}-as" \
-./configure --prefix=PREFIX --dest-cpu=arm --dest-os=linux --with-arm-float-abi=soft; cd ..
+CFLAGS="-march=armv5" \
+CCFLAGS="-march=armv5" \
+CXXFLAGS="-march=armv5" \
+./configure --prefix=PREFIX --dest-cpu=arm --dest-os=linux --with-arm-float-abi=soft --without-snapshot; cd ..
