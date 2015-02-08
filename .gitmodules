@@ -31,3 +31,6 @@
 [submodule "rootfs"]
 	path = rootfs
 	url = https://github.com/OpenFPGAduino/rootfs.git
+[submodule "sdcard"]
+	path = sdcard
+	url = https://github.com/OpenFPGAduino/sdcard.git
