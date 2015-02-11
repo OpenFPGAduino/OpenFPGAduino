@@ -34,3 +34,6 @@
 [submodule "sdcard"]
 	path = sdcard
 	url = https://github.com/OpenFPGAduino/sdcard.git
+[submodule "FPGAdesigner"]
+	path = FPGAdesigner
+	url = https://github.com/OpenFPGAduino/FPGAdesigner.git
