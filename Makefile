@@ -10,7 +10,8 @@ export CC:="$(HOST)-gcc"
 export CXX:="$(HOST)-g++" 
 export NM:="$(HOST)-nm" 
 export AS:="$(HOST)-as"
-all:
+all:build image
+build:
 	echo "Build submodule linux";     	
 	cd linux; make zImage; cd ..;
 	@for module in `ls -l | grep ^d | awk '{ print $$NF }' | sed 's/linux//g'`; do \
@@ -25,15 +26,14 @@ clean:
 
 image:
 	#boot partition
-	cp -rf boot/ sdcard/boot
-	cp -rf linux/arch/arm/boot/zImage sdcard/boot
-	cp -rf fpga/ouput/grid.rbf sdcard/boot
+	cp -rpf boot/ sdcard/boot
+	cp -rpf linux/arch/arm/boot/zImage sdcard/boot
+	cp -rpf fpga/output/grid.rbf sdcard/boot
 	#linux partition
-	cp -rf driver/openfpgaduino.ko rootfs/fs/home/
-	cp -rf node/node rootfs/fs/bin/
-	cp -rf ArduinoIDE rootfs/fs/home/
-	cp -rf libAduino/libaduino.a rootfs/fs/home/ArduinoIDE/api/
-	cp -rf libAduino/api/openfpgaduino.h rootfs/fs/home/ArduinoIDE/api/
-	cp -rf Arduinojs/build/Release/openfpgaduino rootfs/fs/home/ArduinoIDE/
-	cp 
-
+	sudo cp -rpf driver/openfpgaduino.ko rootfs/fs/home/
+	sudo cp -rpf node/node rootfs/fs/bin/
+	sudo cp -rpf ArduinoIDE rootfs/fs/home/
+	sudo cp -rpf libAduino/libaduino.a rootfs/fs/home/ArduinoIDE/api/
+	sudo cp -rpf libAduino/api/openfpgaduino.h rootfs/fs/home/ArduinoIDE/api/
+	sudo cp -rpf Arduinojs/build/Release/openfpgaduino.node rootfs/fs/home/ArduinoIDE/ 
+	
