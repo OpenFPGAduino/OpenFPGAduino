@@ -26,9 +26,10 @@ clean:
 
 image:
 	#boot partition
-	cp -rpf boot/ sdcard/boot
-	cp -rpf linux/arch/arm/boot/zImage sdcard/boot
-	cp -rpf fpga/output/grid.rbf sdcard/boot
+	cp -rpf boot/boot.bin sdcard/boot/
+	cp -rpf boot/kcmd.txt sdcard/boot/
+	cp -rpf linux/arch/arm/boot/zImage sdcard/boot/
+	cp -rpf fpga/output/grid.rbf sdcard/boot/
 	#linux partition
 	sudo cp -rpf driver/openfpgaduino.ko rootfs/fs/home/
 	sudo cp -rpf node/node rootfs/fs/bin/

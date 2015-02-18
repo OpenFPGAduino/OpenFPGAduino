@@ -37,3 +37,6 @@
 [submodule "FPGAdesigner"]
 	path = FPGAdesigner
 	url = https://github.com/OpenFPGAduino/FPGAdesigner.git
+[submodule "script"]
+	path = script
+	url = https://github.com/OpenFPGAduino/script.git
