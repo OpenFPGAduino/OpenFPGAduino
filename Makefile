@@ -34,7 +34,7 @@ image:
 	sudo cp -rpf driver/openfpgaduino.ko rootfs/fs/home/
 	sudo cp -rpf node/node rootfs/fs/bin/
 	sudo cp -rpf ArduinoIDE rootfs/fs/home/
-	sudo cp -rpf libAduino/libaduino.a rootfs/fs/home/ArduinoIDE/api/
-	sudo cp -rpf libAduino/api/openfpgaduino.h rootfs/fs/home/ArduinoIDE/api/
+	sudo cp -rpf libAduino/lib/libaduino.a rootfs/fs/home/ArduinoIDE/api/
+	sudo cp -rpf libAduino/lib/openfpgaduino.h rootfs/fs/home/ArduinoIDE/api/
 	sudo cp -rpf Arduinojs/build/Release/openfpgaduino.node rootfs/fs/home/ArduinoIDE/ 
 	sudo cp -rpf rootfs/fs/ sdcard/os/
