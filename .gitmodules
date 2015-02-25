@@ -40,3 +40,6 @@
 [submodule "script"]
 	path = script
 	url = https://github.com/OpenFPGAduino/script.git
+[submodule "wifi"]
+	path = wifi
+	url = https://github.com/OpenFPGAduino/wifi.git
