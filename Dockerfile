@@ -1,5 +1,6 @@
 FROM lizhizhou/openfpgaduino
 MAINTAINER Zhizhou Li <lzz@meteroi.com>
+RUN apt-get install libcurl4-gnutls-dev
 RUN apt-get install -y debootstrap
 RUN npm install -g gitbook-cli
 RUN ln -s /usr/bin/nodejs /usr/bin/node
