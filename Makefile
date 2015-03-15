@@ -31,6 +31,7 @@ image:
 	cp -rpf linux/arch/arm/boot/zImage sdcard/boot/
 	cp -rpf fpga/output/grid.rbf sdcard/boot/
 	#linux partition
+	cd linux; sudo make INSTALL_MOD_PATH=../rootfs/fs modules_install; cd ..;
 	sudo cp -rpf driver/openfpgaduino.ko rootfs/fs/home/
 	sudo cp -rpf node/node rootfs/fs/bin/
 	sudo cp -rpf ArduinoIDE rootfs/fs/home/
