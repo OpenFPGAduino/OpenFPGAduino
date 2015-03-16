@@ -13,7 +13,7 @@ export AS:="$(HOST)-as"
 all:build image
 build:
 	echo "Build submodule linux";     	
-	cd linux; make zImage; cd ..;
+	cd linux; make ; cd ..;
 	@for module in `ls -l | grep ^d | awk '{ print $$NF }' | sed 's/linux//g'`; do \
 	echo "Build submodule "$$module;                                               \
 	cd $$module; make; cd .. ;                                                     \
@@ -32,7 +32,8 @@ image:
 	cp -rpf fpga/output/grid.rbf sdcard/boot/
 	#linux partition
 	cd linux; sudo make INSTALL_MOD_PATH=../rootfs/fs modules_install; cd ..;
-	sudo cp -rpf driver/openfpgaduino.ko rootfs/fs/home/
+	sudo mkdir -p rootfs/fs/lib/modules/3.4.18+/openfpgaduino
+	sudo cp -rpf driver/openfpgaduino.ko rootfs/fs/lib/modules/3.4.18+/openfpgaduino/
 	sudo cp -rpf node/node rootfs/fs/bin/
 	sudo cp -rpf ArduinoIDE rootfs/fs/home/
 	sudo cp -rpf libAduino/lib/libaduino.a rootfs/fs/home/ArduinoIDE/api/
