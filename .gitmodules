@@ -43,3 +43,6 @@
 [submodule "wifi"]
 	path = wifi
 	url = https://github.com/OpenFPGAduino/wifi.git
+[submodule "cloud"]
+	path = cloud
+	url = https://github.com/OpenFPGAduino/cloud.git
