@@ -49,3 +49,6 @@
 [submodule "bigdata"]
 	path = bigdata
 	url = https://github.com/OpenFPGAduino/bigdata.git
+[submodule "ArduinojsIDE"]
+	path = ArduinojsIDE
+	url = https://github.com/OpenFPGAduino/ArduinojsIDE.git
