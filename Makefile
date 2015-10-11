@@ -35,7 +35,7 @@ image:
 	sudo mkdir -p rootfs/fs/lib/modules/3.4.18+/openfpgaduino
 	sudo depmod -b rootfs/fs/ 3.4.18+
 	sudo cp -rpf driver/openfpgaduino.ko rootfs/fs/lib/modules/3.4.18+/openfpgaduino/
-	sudo cp -rpf node/node rootfs/fs/bin/
+	sudo cp -rpf node/out/Release/node rootfs/fs/bin/
 	sudo cp -rpf ArduinoIDE rootfs/fs/home/openfpgaduino/
 	sudo cp -rpf FPGAdesigner rootfs/fs/home/openfpgaduino/
 	sudo cp -rpf libAduino/lib/libaduino.a rootfs/fs/home/openfpgaduino/ArduinoIDE/api/
