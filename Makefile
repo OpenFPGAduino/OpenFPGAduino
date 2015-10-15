@@ -34,6 +34,7 @@ image:
 	cd linux; sudo make INSTALL_MOD_PATH=../rootfs/fs modules_install; cd ..;
 	sudo mkdir -p rootfs/fs/lib/modules/3.4.18+/openfpgaduino
 	sudo cp -rpf driver/openfpgaduino.ko rootfs/fs/lib/modules/3.4.18+/openfpgaduino/
+	sudo bash -c "echo openfpgaduino >> rootfs/fs/etc/modules"
 	sudo depmod -b rootfs/fs/ 3.4.18+
 	sudo cp -rpf node/out/Release/node rootfs/fs/bin/
 	sudo cp -rpf ArduinoIDE rootfs/fs/home/openfpgaduino/
@@ -47,4 +48,5 @@ image:
 	sudo chroot rootfs/fs chown -R openfpgaduino /home/openfpgaduino
 
 sim:
-	sudo qemu-system-arm -M versatilepb -kernel linux/arch/arm/boot/zImage -append root="/dev/nfs nfsroot=10.0.0.1:/home/zhizhouli/OpenFPGAduino/rootfs/fs/ rw ip=10.0.0.2:10.0.0.1:10.0.0.1:255.255.255.0" -net nic,vlan=0 -net tap,vlan=0,ifname=tap0,script=./qemu-ifup &
+	sudo qemu-system-arm -M versatilepb -m 128M -nographic -kernel linux/arch/arm/boot/zImage -append "root=/dev/nfs nfsroot=127.0.0.1:/home/zhizhouli/OpenFPGAduino/rootfs/fs/ rw ip=dhcp init=/bin/systemd"
+# -net nic,vlan=0 -net tap,vlan=0,ifname=tap0,script=./qemu-ifup -serial stdio 
