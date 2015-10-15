@@ -45,3 +45,6 @@ image:
 	sudo cp -rpf script/ide.service rootfs/fs/lib/systemd/system/
 	sudo cp -rpf script/fpga_config.sh rootfs/fs/home/openfpgaduino/ArduinoIDE/
 	sudo chroot rootfs/fs chown -R openfpgaduino /home/openfpgaduino
+
+sim:
+	sudo qemu-system-arm -M versatilepb -kernel linux/arch/arm/boot/zImage -append root="/dev/nfs nfsroot=10.0.0.1:/home/zhizhouli/OpenFPGAduino/rootfs/fs/ rw ip=10.0.0.2:10.0.0.1:10.0.0.1:255.255.255.0" -net nic,vlan=0 -net tap,vlan=0,ifname=tap0,script=./qemu-ifup &
