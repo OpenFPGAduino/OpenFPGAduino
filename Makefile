@@ -43,10 +43,14 @@ image:
 	sudo cp -rpf libAduino/lib/openfpgaduino.h rootfs/fs/home/openfpgaduino/ArduinoIDE/api/
 	sudo cp -rpf Arduinojs/build/Release/openfpgaduino.node rootfs/fs/home/openfpgaduino/ArduinoIDE/
 	sudo cp -rpf docs/_book rootfs/fs/home/openfpgaduino/ArduinoIDE/docs
-	sudo cp -rpf script/ide.service rootfs/fs/lib/systemd/system/
+	sudo cp -rpf script/cide.service rootfs/fs/lib/systemd/system/
+	sudo cp -rpf script/fpgaide.service rootfs/fs/lib/systemd/system/
+	sudo chroot rootfs/fs/ systemctl enable cide
+	sudo chroot rootfs/fs/ systemctl enable fpgaide
 	sudo cp -rpf script/fpga_config.sh rootfs/fs/home/openfpgaduino/ArduinoIDE/
 	sudo chroot rootfs/fs chown -R openfpgaduino /home/openfpgaduino
 
 sim:
+#todo
 	sudo qemu-system-arm -M versatilepb -m 128M -nographic -kernel linux/arch/arm/boot/zImage -append "root=/dev/nfs nfsroot=127.0.0.1:/home/zhizhouli/OpenFPGAduino/rootfs/fs/ rw ip=dhcp init=/bin/systemd"
 # -net nic,vlan=0 -net tap,vlan=0,ifname=tap0,script=./qemu-ifup -serial stdio 
