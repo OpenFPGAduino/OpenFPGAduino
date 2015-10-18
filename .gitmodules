@@ -52,3 +52,6 @@
 [submodule "ArduinojsIDE"]
 	path = ArduinojsIDE
 	url = https://github.com/OpenFPGAduino/ArduinojsIDE.git
+[submodule "MobileApp"]
+	path = MobileApp
+	url = https://github.com/OpenFPGAduino/MobileApp.git
