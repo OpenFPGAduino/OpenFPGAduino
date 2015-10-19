@@ -52,5 +52,4 @@ image:
 
 sim:
 #todo
-	sudo qemu-system-arm -M versatilepb -m 128M -nographic -kernel linux/arch/arm/boot/zImage -append "root=/dev/nfs nfsroot=127.0.0.1:/home/zhizhouli/OpenFPGAduino/rootfs/fs/ rw ip=dhcp init=/bin/systemd"
-# -net nic,vlan=0 -net tap,vlan=0,ifname=tap0,script=./qemu-ifup -serial stdio 
+	sudo qemu-system-arm -M versatilepb -m 128M -nographic -serial stdio -kernel linux/arch/arm/boot/zImage -append "root=/dev/nfs nfsroot=127.0.0.1:/home/zhizhouli/OpenFPGAduino/rootfs/fs/ rw ip=dhcp init=/bin/systemd console=ttyS0 mem=128M rootwait noinitrd" -net nic,vlan=0 -net tap,vlan=0,ifname=tap0,script=./qemu-ifup 
