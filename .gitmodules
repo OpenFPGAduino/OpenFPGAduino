@@ -55,3 +55,6 @@
 [submodule "MobileApp"]
 	path = MobileApp
 	url = https://github.com/OpenFPGAduino/MobileApp.git
+[submodule "OpenFPGAduino.github.io"]
+	path = OpenFPGAduino.github.io
+	url = https://github.com/OpenFPGAduino/OpenFPGAduino.github.io.git
