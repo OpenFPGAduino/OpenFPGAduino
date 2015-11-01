@@ -1,3 +1,0 @@
-#!/bin/sh
-echo "Executing /etc/qemu-ifup"
-sudo ifconfig $1 10.0.0.1
