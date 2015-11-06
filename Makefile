@@ -52,3 +52,10 @@ image:
 
 web:
 	cp -rpf docs/_book OpenFPGAduino.github.io/docs
+
+update:
+	git pull --recurse-submodules
+	@for module in `ls -l | grep ^d | awk '{ print $$NF }'`; do                    \
+	echo "Update submodule "$$module;                                               \
+	cd $$module; git pull ; cd .. ;                                              \
+	done
