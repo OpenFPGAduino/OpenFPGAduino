@@ -40,6 +40,7 @@ image:
 	sudo cp -rpf ArduinoIDE rootfs/fs/home/openfpgaduino/
 	sudo cp -rpf FPGAdesigner rootfs/fs/home/openfpgaduino/
 	sudo cp -rpf libAduino/lib/libaduino.a rootfs/fs/home/openfpgaduino/ArduinoIDE/api/
+	sudo cp -rpf libAduino/lib/libaduino.so rootfs/fs/lib/
 	sudo cp -rpf libAduino/lib/openfpgaduino.h rootfs/fs/home/openfpgaduino/ArduinoIDE/api/
 	sudo cp -rpf Arduinojs/build/Release/openfpgaduino.node rootfs/fs/home/openfpgaduino/ArduinoIDE/
 	sudo cp -rpf docs/_book rootfs/fs/home/openfpgaduino/ArduinoIDE/docs
