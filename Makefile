@@ -52,7 +52,7 @@ image:
 	sudo chroot rootfs/fs chown -R openfpgaduino /home/openfpgaduino
 
 web:
-	cp -rpf docs/_book OpenFPGAduino.github.io/docs
+	cp -rf docs/_book OpenFPGAduino.github.io/docs
 
 update:
 	git pull --recurse-submodules
