@@ -10,7 +10,7 @@ export CC:="$(HOST)-gcc"
 export CXX:="$(HOST)-g++" 
 export NM:="$(HOST)-nm" 
 export AS:="$(HOST)-as"
-all:build image
+all:build image web
 build:
 	echo "Build submodule linux";     	
 	cd linux; make ; cd ..;
