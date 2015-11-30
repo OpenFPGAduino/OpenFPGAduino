@@ -1,7 +1,7 @@
 # OpenFPGAduino
 All open source file and project for OpenFPGAduino project
 
-Official web site include document and video demo
+Official web site includes document and video demo
 
       http://openfpgaduino.github.io
 
