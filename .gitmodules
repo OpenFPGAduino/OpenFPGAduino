@@ -58,3 +58,6 @@
 [submodule "OpenFPGAduino.github.io"]
 	path = OpenFPGAduino.github.io
 	url = https://github.com/OpenFPGAduino/OpenFPGAduino.github.io.git
+[submodule "IoT"]
+	path = IoT
+	url = https://github.com/OpenFPGAduino/IoT.git
