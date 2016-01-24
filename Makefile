@@ -42,13 +42,14 @@ image:
 	sudo cp -rpf libAduino/lib/libaduino.a rootfs/fs/home/openfpgaduino/ArduinoIDE/api/
 	sudo cp -rpf libAduino/lib/libaduino.so rootfs/fs/lib/
 	sudo cp -rpf libAduino/lib/openfpgaduino.h rootfs/fs/home/openfpgaduino/ArduinoIDE/api/
-	sudo cp -rpf Arduinojs/build/Release/openfpgaduino.node rootfs/fs/home/openfpgaduino/ArduinoIDE/
+	sudo cp -rpf Arduinojs rootfs/fs/home/openfpgaduino/Arduinojs
 	sudo cp -rpf docs/_book rootfs/fs/home/openfpgaduino/ArduinoIDE/docs
 	sudo cp -rpf script/cide.service rootfs/fs/lib/systemd/system/
 	sudo cp -rpf script/fpgaide.service rootfs/fs/lib/systemd/system/
 	sudo chroot rootfs/fs/ systemctl enable cide
 	sudo chroot rootfs/fs/ systemctl enable fpgaide
 	sudo cp -rpf script/fpga_config.sh rootfs/fs/home/openfpgaduino/ArduinoIDE/
+	sudo cp -rpf script/fpga_config.sh rootfs/fs/home/openfpgaduino/Arduinojs/
 	sudo chroot rootfs/fs chown -R openfpgaduino /home/openfpgaduino
 
 web:
