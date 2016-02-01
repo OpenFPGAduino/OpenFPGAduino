@@ -9,17 +9,20 @@ Prepare the Build environment
 
       Install the docker: https://docs.docker.com/installation/#installation
 
-      Download the Build environment: 
-      sudo docker pull openfpgaduino/openfpgaduino
-
-      Run the environment and open the shell:
-      sudo docker run --privileged -i -t openfpgaduino/openfpgaduino
-
       Pull the view:
+      
       git clone --recursive https://github.com/OpenFPGAduino/OpenFPGAduino.git
+
+      Run the script to prepare the build environment
+      
+      cd OpenFPGAduino
+      
+      ./start-build-env.sh
 
 Build all:
 
+      In the container build all the source code:
+      
       ./configure
 
       make
