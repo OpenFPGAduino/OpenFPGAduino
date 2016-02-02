@@ -64,6 +64,13 @@ web:
 update:
 	git pull --recurse-submodules
 	@for module in `ls -l | grep ^d | awk '{ print $$NF }'`; do                    \
-	echo "Update submodule "$$module;                                               \
-	cd $$module; git pull ; cd .. ;                                              \
+	echo "Update submodule "$$module;                                              \
+	git submodule update $$module;                                                 \
+	cd $$module; git pull ; cd .. ;                           \
+	done
+
+master:
+	@for module in `ls -l | grep ^d | awk '{ print $$NF }' | sed 's/node//g'`; do  \
+	echo "Checkout master"$$module;                                                \
+	cd $$module; git checkout master; git pull ; cd .. ;                           \
 	done
