@@ -23,6 +23,8 @@ Build all:
 
       In the container build all the source code:
       
+      cd home/
+
       ./configure
 
       make
