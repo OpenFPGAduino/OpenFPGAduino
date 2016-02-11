@@ -52,8 +52,10 @@ image:
 	sudo cp -rpf docs/_book rootfs/fs/home/openfpgaduino/ArduinoIDE/docs
 	sudo cp -rpf script/cide.service rootfs/fs/lib/systemd/system/
 	sudo cp -rpf script/fpgaide.service rootfs/fs/lib/systemd/system/
+	sudo cp -rpf script/arduino.service rootfs/fs/lib/systemd/system/
 	sudo chroot rootfs/fs/ systemctl enable cide
 	sudo chroot rootfs/fs/ systemctl enable fpgaide
+	sudo chroot rootfs/fs/ systemctl enable arduino
 	sudo cp -rpf script/fpga_config.sh rootfs/fs/home/openfpgaduino/ArduinoIDE/
 	sudo cp -rpf script/fpga_config.sh rootfs/fs/home/openfpgaduino/Arduinojs/
 	sudo chroot rootfs/fs chown -R openfpgaduino /home/openfpgaduino
