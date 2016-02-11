@@ -14,4 +14,4 @@ AS="${HOST}-as" \
 CFLAGS="-march=armv5" \
 CCFLAGS="-march=armv5" \
 CXXFLAGS="-march=armv5" \
-./configure --prefix=PREFIX --dest-cpu=arm --dest-os=linux --with-arm-float-abi=soft --without-snapshot; cd ..
+./configure --prefix=../rootfs/fs/ --dest-cpu=arm --dest-os=linux --with-arm-float-abi=soft --without-snapshot; cd ..

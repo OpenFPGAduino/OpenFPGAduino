@@ -42,7 +42,10 @@ image:
 	sudo cp -rpf driver/openfpgaduino.ko rootfs/fs/lib/modules/3.4.18+/openfpgaduino/
 	sudo bash -c "echo openfpgaduino >> rootfs/fs/etc/modules"
 	sudo depmod -b rootfs/fs/ 3.4.18+
-	sudo cp -rpf node/out/Release/node rootfs/fs/bin/
+	#sudo cp -rpf node/out/Release/node rootfs/fs/bin/
+	cd node; make install; cd ..;
+	##Hack for nodejs path issue
+	sudo grep -rl --binary-files=without-match '../rootfs/fs/' ./rootfs/fs/ | xargs sed -i 's/\.\.\/rootfs\/fs\//\//g'
 	sudo cp -rpf ArduinoIDE rootfs/fs/home/openfpgaduino/
 	sudo cp -rpf FPGAdesigner rootfs/fs/home/openfpgaduino/
 	sudo cp -rpf libAduino/lib/libaduino.a rootfs/fs/home/openfpgaduino/ArduinoIDE/api/
