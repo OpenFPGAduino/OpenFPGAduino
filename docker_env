@@ -1,1 +1,3 @@
 PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/gcc/bin:/altera/14.1/quartus/bin:/altera/14.1/quartus/sopc_builder/bin
+KEIL="/root/.wine/drive_c/Keil/UV4/UV4.exe"
+DISPALY=":1"
