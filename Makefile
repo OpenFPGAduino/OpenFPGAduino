@@ -45,7 +45,8 @@ image:
 	#sudo cp -rpf node/out/Release/node rootfs/fs/bin/
 	cd node; sudo make install; cd ..;
 	##Hack for nodejs path issue
-	sudo grep -rl --binary-files=without-match '../rootfs/fs/' ./rootfs/fs/ | xargs sudo sed -i 's/\.\.\/rootfs\/fs\//\//g'
+	sudo sed -i 's/\.\.\/rootfs\/fs\//\//g' rootfs/fs/lib/node_modules/npm/bin/npm-cli.js
+	sudo sed -i 's/\.\.\/rootfs\/fs\//\//g' rootfs/fs/include/node/config.gypi	
 	sudo cp -rpf ArduinoIDE rootfs/fs/home/openfpgaduino/
 	sudo cp -rpf FPGAdesigner rootfs/fs/home/openfpgaduino/
 	sudo cp -rpf libAduino/lib/libaduino.a rootfs/fs/home/openfpgaduino/ArduinoIDE/api/
