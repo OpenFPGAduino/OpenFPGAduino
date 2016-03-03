@@ -63,7 +63,8 @@ image:
 	sudo chroot rootfs/fs/ systemctl enable arduino
 	sudo cp -rpf script/fpga_config.sh rootfs/fs/home/openfpgaduino/ArduinoIDE/
 	sudo cp -rpf script/fpga_config.sh rootfs/fs/home/openfpgaduino/Arduinojs/
-	sudo chroot rootfs/fs chown -R openfpgaduino /home/openfpgaduino
+	sudo chroot rootfs/fs chown -R openfpgaduino /home/openfpgaduino/
+	cd sdcard; sudo make image; cd ..
 
 web:
 	cp -rf docs/_book OpenFPGAduino.github.io/docs
