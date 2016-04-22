@@ -43,7 +43,7 @@ image:
 	sudo bash -c "echo openfpgaduino >> rootfs/fs/etc/modules"
 	sudo depmod -b rootfs/fs/ 3.4.18+
 	#sudo cp -rpf node/out/Release/node rootfs/fs/bin/
-	cd node; sudo make install; cd ..;
+	cd node; sudo env PATH=$PATH make install; cd ..;
 	##Hack for nodejs path issue
 	sudo sed -i 's/\.\.\/rootfs\/fs\//\//g' rootfs/fs/lib/node_modules/npm/bin/npm-cli.js
 	sudo sed -i 's/\.\.\/rootfs\/fs\//\//g' rootfs/fs/include/node/config.gypi	
