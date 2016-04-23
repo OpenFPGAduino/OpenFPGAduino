@@ -37,13 +37,13 @@ image:
 	cp -rpf linux/arch/arm/boot/zImage sdcard/boot/
 	cp -rpf fpga/output/grid.rbf sdcard/boot/
 	#linux partition
-	cd linux; sudo make INSTALL_MOD_PATH=../rootfs/fs modules_install; cd ..;
+	cd linux; sudo env PATH=$(PATH) make INSTALL_MOD_PATH=../rootfs/fs modules_install; cd ..;
 	sudo mkdir -p rootfs/fs/lib/modules/3.4.18+/openfpgaduino
 	sudo cp -rpf driver/openfpgaduino.ko rootfs/fs/lib/modules/3.4.18+/openfpgaduino/
 	sudo bash -c "echo openfpgaduino >> rootfs/fs/etc/modules"
 	sudo depmod -b rootfs/fs/ 3.4.18+
 	#sudo cp -rpf node/out/Release/node rootfs/fs/bin/
-	cd node; sudo env PATH=$PATH make install; cd ..;
+	cd node; sudo env PATH=$(PATH) make install; cd ..;
 	##Hack for nodejs path issue
 	sudo sed -i 's/\.\.\/rootfs\/fs\//\//g' rootfs/fs/lib/node_modules/npm/bin/npm-cli.js
 	sudo sed -i 's/\.\.\/rootfs\/fs\//\//g' rootfs/fs/include/node/config.gypi	
