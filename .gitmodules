@@ -64,3 +64,6 @@
 [submodule "sdn"]
 	path = sdn
 	url = https://github.com/OpenFPGAduino/sdn.git
+[submodule "BlocklyIDE"]
+	path = BlocklyIDE
+	url = https://github.com/OpenFPGAduino/BlocklyIDE.git
