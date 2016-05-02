@@ -14,7 +14,7 @@ all:build image web
 build:
 	echo "Build submodule linux";     	
 	cd linux; make ; cd ..;
-	@for module in `ls -l | grep ^d | awk '{ print $$NF }' | sed 's/linux//g'`; do \
+	@for module in `ls -l | grep ^d | awk '{ print $$NF }' | sed 's/linux//g' | sed 's/bigdata//g' | sed 's/sdn//g'`; do \
 	echo "Build submodule "$$module;                                               \
 	cd $$module; make; cd .. ;                                                     \
 	done
