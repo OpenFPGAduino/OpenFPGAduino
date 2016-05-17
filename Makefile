@@ -54,7 +54,7 @@ image:
 	sudo cp -rpf libAduino/lib/openfpgaduino.h rootfs/fs/home/openfpgaduino/ArduinoIDE/api/
 	sudo cp -rpf Arduinojs rootfs/fs/home/openfpgaduino/Arduinojs
 	sudo cp -rpf ArduinojsIDE rootfs/fs/home/openfpgaduino/Arduinojs/page/jside
-	sudo cp -rpf BlocklyIDE rootfs/fs/home/openfpgaduino/Arduinojs/page/blocklyide
+	sudo cp -rpf BlocklyIDE/blocklyide rootfs/fs/home/openfpgaduino/Arduinojs/page/blocklyide
 	sudo cp -rpf MobileApp/ionic/ionic/www rootfs/fs/home/openfpgaduino/Arduinojs/page/mobile
 	sudo cp -rpf docs/_book rootfs/fs/home/openfpgaduino/ArduinoIDE/docs
 	sudo cp -rpf script/cide.service rootfs/fs/lib/systemd/system/
