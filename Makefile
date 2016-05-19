@@ -32,39 +32,39 @@ format:
 
 image:
 	#boot partition
-	cp -rpf boot/boot.bin sdcard/boot/
-	cp -rpf boot/kcmd.txt sdcard/boot/
-	cp -rpf linux/arch/arm/boot/zImage sdcard/boot/
-	cp -rpf fpga/output/grid.rbf sdcard/boot/
+	rsync -rp boot/boot.bin sdcard/boot/
+	rsync -rp boot/kcmd.txt sdcard/boot/
+	rsync -rp linux/arch/arm/boot/zImage sdcard/boot/
+	rsync -rp fpga/output/grid.rbf sdcard/boot/
 	#linux partition
 	cd linux; sudo env PATH=$(PATH) make INSTALL_MOD_PATH=../rootfs/fs modules_install; cd ..;
 	sudo mkdir -p rootfs/fs/lib/modules/3.4.18+/openfpgaduino
-	sudo cp -rpf driver/openfpgaduino.ko rootfs/fs/lib/modules/3.4.18+/openfpgaduino/
+	sudo rsync -rp driver/openfpgaduino.ko rootfs/fs/lib/modules/3.4.18+/openfpgaduino/
 	sudo bash -c "echo openfpgaduino >> rootfs/fs/etc/modules"
 	sudo depmod -b rootfs/fs/ 3.4.18+
-	#sudo cp -rpf node/out/Release/node rootfs/fs/bin/
+	#sudo rsync -rp node/out/Release/node rootfs/fs/bin/
 	cd node; sudo env PATH=$(PATH) make install; cd ..;
 	##Hack for nodejs path issue
 	sudo sed -i 's/\.\.\/rootfs\/fs\//\//g' rootfs/fs/lib/node_modules/npm/bin/npm-cli.js
 	sudo sed -i 's/\.\.\/rootfs\/fs\//\//g' rootfs/fs/include/node/config.gypi	
-	sudo cp -rpf ArduinoIDE rootfs/fs/home/openfpgaduino/
-	sudo cp -rpf FPGAdesigner rootfs/fs/home/openfpgaduino/
-	sudo cp -rpf libAduino/lib/libaduino.a rootfs/fs/home/openfpgaduino/ArduinoIDE/api/
-	sudo cp -rpf libAduino/lib/libaduino.so rootfs/fs/lib/
-	sudo cp -rpf libAduino/lib/openfpgaduino.h rootfs/fs/home/openfpgaduino/ArduinoIDE/api/
-	sudo cp -rpf Arduinojs rootfs/fs/home/openfpgaduino/Arduinojs
-	sudo cp -rpf ArduinojsIDE rootfs/fs/home/openfpgaduino/Arduinojs/page/jside
-	sudo cp -rpf BlocklyIDE/blocklyide rootfs/fs/home/openfpgaduino/Arduinojs/page/blocklyide
-	sudo cp -rpf MobileApp/ionic/ionic/www rootfs/fs/home/openfpgaduino/Arduinojs/page/mobile
-	sudo cp -rpf docs/_book rootfs/fs/home/openfpgaduino/ArduinoIDE/docs
-	sudo cp -rpf script/cide.service rootfs/fs/lib/systemd/system/
-	sudo cp -rpf script/fpgaide.service rootfs/fs/lib/systemd/system/
-	sudo cp -rpf script/arduino.service rootfs/fs/lib/systemd/system/
+	sudo rsync -rp ArduinoIDE rootfs/fs/home/openfpgaduino/
+	sudo rsync -rp FPGAdesigner rootfs/fs/home/openfpgaduino/
+	sudo rsync -rp libAduino/lib/libaduino.a rootfs/fs/home/openfpgaduino/ArduinoIDE/api/
+	sudo rsync -rp libAduino/lib/libaduino.so rootfs/fs/lib/
+	sudo rsync -rp libAduino/lib/openfpgaduino.h rootfs/fs/home/openfpgaduino/ArduinoIDE/api/
+	sudo rsync -rp Arduinojs rootfs/fs/home/openfpgaduino/Arduinojs
+	sudo rsync -rp ArduinojsIDE rootfs/fs/home/openfpgaduino/Arduinojs/page/jside
+	sudo rsync -rp BlocklyIDE/blocklyide rootfs/fs/home/openfpgaduino/Arduinojs/page/blocklyide
+	sudo rsync -rp MobileApp/ionic/ionic/www rootfs/fs/home/openfpgaduino/Arduinojs/page/mobile
+	sudo rsync -rp docs/_book rootfs/fs/home/openfpgaduino/ArduinoIDE/docs
+	sudo rsync -rp script/cide.service rootfs/fs/lib/systemd/system/
+	sudo rsync -rp script/fpgaide.service rootfs/fs/lib/systemd/system/
+	sudo rsync -rp script/arduino.service rootfs/fs/lib/systemd/system/
 	sudo chroot rootfs/fs/ systemctl enable cide
 	sudo chroot rootfs/fs/ systemctl enable fpgaide
 	sudo chroot rootfs/fs/ systemctl enable arduino
-	sudo cp -rpf script/fpga_config.sh rootfs/fs/home/openfpgaduino/ArduinoIDE/
-	sudo cp -rpf script/fpga_config.sh rootfs/fs/home/openfpgaduino/Arduinojs/
+	sudo rsync -rp script/fpga_config.sh rootfs/fs/home/openfpgaduino/ArduinoIDE/
+	sudo rsync -rp script/fpga_config.sh rootfs/fs/home/openfpgaduino/Arduinojs/
 	sudo chroot rootfs/fs chown -R openfpgaduino /home/openfpgaduino/
 	cd sdcard; sudo env PATH=$(PATH) make image; cd ..
 
