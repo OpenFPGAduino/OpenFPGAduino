@@ -69,7 +69,8 @@ image:
 	cd sdcard; sudo env PATH=$(PATH) make image; cd ..
 
 web:
-	cp -rf docs/_book OpenFPGAduino.github.io/docs
+	cp   -rpf docs/_book OpenFPGAduino.github.io/docs
+	rsync -rp BlocklyIDE/blocklyide OpenFPGAduino.github.io/
 
 update:
 	git pull --recurse-submodules
