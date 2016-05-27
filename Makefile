@@ -53,10 +53,10 @@ image:
 	sudo rsync -ar libAduino/lib/libaduino.so rootfs/fs/lib/
 	sudo rsync -ar libAduino/lib/openfpgaduino.h rootfs/fs/home/openfpgaduino/ArduinoIDE/api/
 	sudo rsync -ar Arduinojs rootfs/fs/home/openfpgaduino/
-	sudo rsync -ar ArduinojsIDE rootfs/fs/home/openfpgaduino/Arduinojs/page/jside
+	sudo rsync -ar ArduinojsIDE/* rootfs/fs/home/openfpgaduino/Arduinojs/page/jside
 	sudo rsync -ar BlocklyIDE/blocklyide rootfs/fs/home/openfpgaduino/Arduinojs/page/
-	sudo rsync -ar MobileApp/ionic/ionic/www rootfs/fs/home/openfpgaduino/Arduinojs/page/mobile
-	sudo rsync -ar docs/_book rootfs/fs/home/openfpgaduino/ArduinoIDE/docs
+	sudo rsync -ar MobileApp/ionic/ionic/www/* rootfs/fs/home/openfpgaduino/Arduinojs/page/mobile
+	sudo rsync -ar docs/_book/* rootfs/fs/home/openfpgaduino/ArduinoIDE/docs
 	sudo rsync -ar script/cide.service rootfs/fs/lib/systemd/system/
 	sudo rsync -ar script/fpgaide.service rootfs/fs/lib/systemd/system/
 	sudo rsync -ar script/arduino.service rootfs/fs/lib/systemd/system/
