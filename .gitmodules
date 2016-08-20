@@ -67,3 +67,6 @@
 [submodule "BlocklyIDE"]
 	path = BlocklyIDE
 	url = https://github.com/OpenFPGAduino/BlocklyIDE.git
+[submodule "machinelearning"]
+	path = machinelearning
+	url = https://github.com/OpenFPGAduino/machinelearning.git
