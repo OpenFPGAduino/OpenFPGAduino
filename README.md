@@ -7,11 +7,13 @@ http://openfpgaduino.github.io
 
 # The live demo
 
-http://v.youku.com/v_show/id_XOTQ3MjkxNzU2.html?from=y1.7-1.2
+http://v.youku.com/v_show/id_XOTQ3MjkxNzU2.html
 
-http://v.youku.com/v_show/id_XMTU3MTUzNTM4OA==.html?spm=a2hzp.8253869.0.0
+http://v.youku.com/v_show/id_XMTU3MTUzNTM4OA==.html
 
-http://v.youku.com/v_show/id_XMTg4MjgyMDU4MA==.html?spm=a2hzp.8253869.0.0
+http://v.youku.com/v_show/id_XMTY4NDYwMjM4MA==.html
+
+http://v.youku.com/v_show/id_XMTg4MjgyMDU4MA==.html
 
 https://www.youtube.com/watch?v=jsjrgsI-3QM
 
