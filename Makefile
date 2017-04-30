@@ -71,6 +71,7 @@ image:
 web:
 	rsync -ar docs/_book/ OpenFPGAduino.github.io/docs
 	rsync -ar BlocklyIDE/blocklyide OpenFPGAduino.github.io/
+	cd OpenFPGAduino.github.io; patch -p1 < ../web.patch
 
 update:
 	git pull --recurse-submodules

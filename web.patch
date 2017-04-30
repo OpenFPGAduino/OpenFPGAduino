@@ -1,0 +1,22 @@
+diff -urN OpenFPGAduino.github.io/docs/index.html OpenFPGAduino.github.io1/docs/index.html
+--- OpenFPGAduino.github.io/docs/index.html	2017-04-30 10:44:07.847706119 +0800
++++ OpenFPGAduino.github.io1/docs/index.html	2017-04-30 12:13:46.071561790 +0800
+@@ -967,6 +966,17 @@
+                     <section class="normal" id="section-">
+                     
+                         <h1 id="the-openfpgaduino-user-manual">The openFPGAduino User Manual</h1>
++<style>.button-style{ float: right; list-style: none; }</style>
++<script async defer src="https://buttons.github.io/buttons.js"></script>
++<ul>
++    <li class="button-style">
++        <a class="github-button" href="https://github.com/OpenFPGAduino/OpenFPGAduino" data-icon="octicon-star" data-style="mega" data-count-href="/OpenFPGAduino/OpenFPGAduino/stargazers" data-count-api="/repos/OpenFPGAduino/OpenFPGAduino#stargazers_count" data-count-aria-label="# stargazers on GitHub" aria-label="Star OpenFPGAduino/OpenFPGAduino on GitHub">Star</a>
++    </li>
++    <li class="button-style">&nbsp&nbsp&nbsp</li>
++    <li class="button-style">
++        <a class="github-button" href="https://github.com/OpenFPGAduino/OpenFPGAduino/fork" data-icon="octicon-repo-forked" data-style="mega" data-count-href="/OpenFPGAduino/OpenFPGAduino/network" data-count-api="/repos/OpenFPGAduino/OpenFPGAduino#forks_count" data-count-aria-label="# forks on GitHub" aria-label="Fork OpenFPGAduino/OpenFPGAduino on GitHub">Fork</a>
++    </li>
++</ul>
+ <p>OpenFPGAduino is a open source hardware project.
+ <img src="main.jpg" alt="">
+ The live demo</p>
+
