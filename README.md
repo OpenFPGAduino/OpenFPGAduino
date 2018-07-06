@@ -1,4 +1,6 @@
 # OpenFPGAduino
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2FOpenFPGAduino%2FOpenFPGAduino.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2FOpenFPGAduino%2FOpenFPGAduino?ref=badge_shield)
+
 All open source files and projects for OpenFPGAduino project
 
 Official web site includes document and video demo
@@ -45,3 +47,7 @@ Build all:
 
 # Contributing to the code
 Check the [dash board on work items](https://waffle.io/OpenFPGAduino/OpenFPGAduino)
+
+
+## License
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2FOpenFPGAduino%2FOpenFPGAduino.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2FOpenFPGAduino%2FOpenFPGAduino?ref=badge_large)
