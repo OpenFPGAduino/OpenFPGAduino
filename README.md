@@ -19,6 +19,8 @@ https://www.youtube.com/watch?v=jsjrgsI-3QM
 
 https://www.youtube.com/watch?v=g4E1hoc72DY
 
+https://youtu.be/NZYlVR4oYj0
+
 # Build environment
 
 Prepare the Build environment
