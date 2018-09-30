@@ -49,3 +49,6 @@ Build all:
 
 # Contributing to the code
 Check the [dash board on work items](https://waffle.io/OpenFPGAduino/OpenFPGAduino)
+
+# Book for the project
+https://item.jd.com/12360162.html
