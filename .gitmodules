@@ -73,3 +73,6 @@
 [submodule "security"]
 	path = security
 	url = https://github.com/OpenFPGAduino/security.git
+[submodule "Arduinovueadmin"]
+	path = Arduinovueadmin
+	url = https://github.com/OpenFPGAduino/Arduinovueadmin.git
